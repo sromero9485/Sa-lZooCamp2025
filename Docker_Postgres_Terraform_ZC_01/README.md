@@ -30,13 +30,16 @@ Una vez creada la imagen en Docker se puede ejecutar ```docker run -it test:pand
 Los data pipelines tienen que tener un contenedor autosuficientes, es decir, no queremos correr contenedores, ejecutar el archivo de python del pipeline, además de querer agregar parámetros cómo ejecutar un pipeline cierto día, con ciertas transformaciones, con ciertos datos, es decir que sea parametrico. 
 Para esto se tendrá que crear un script de python dónde se podrán agregar las instrucciones necesarias para el pipelime cómo importar paqueterías, hacer transformaciones con pandas, etc..  
 
-```#Pipeline```
-```import sys```
-```import pandas as pd```
-```print(sys.argv)```
-```dat = sys.argv[1]```
-```  #hacer lo que quieras con pandas```
-```print("se terminó la tarea")```
+```
+#Pipeline
+import sys
+import pandas as pd
+print(sys.argv)
+dat = sys.argv[1]
+  #hacer lo que quieras con pandas
+print("se terminó la tarea")
+
+```
 
 
 # Configurar postgres en Docker?
@@ -49,7 +52,7 @@ docker run -it \
   -v c:/workspaces/Sa-lZooCamp2025/Docker_Postgres_Terraform_ZC_01/ny_taxi_db \
   -p 5432:5432 \
   postgres:13
-  
+
 ```
 
 
