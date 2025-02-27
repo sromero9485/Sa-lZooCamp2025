@@ -74,3 +74,12 @@ docker run -it \
     --db=ny_taxi \
     --table_name=yellow_taxi_trips \
     --url=${URL}
+
+#docker compose 
+#ejecutar el docker copose
+
+docker-compose up
+
+#Shutting it down:
+
+docker-compose down
